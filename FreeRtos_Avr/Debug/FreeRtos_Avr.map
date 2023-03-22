@@ -1,0 +1,680 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ./FRTOS.c/RTOS_Task1_LedIntro.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              ./FRTOS.c/RTOS_Task1_LedIntro.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                              ./FRTOS.c/queue.o (memcpy)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+                              ./FRTOS.c/tasks.o (memset)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strncpy.o)
+                              ./FRTOS.c/tasks.o (strncpy)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+LOAD ./FRTOS.c/DIO_prg.o
+LOAD ./FRTOS.c/RTOS_Task1_LedIntro.o
+LOAD ./FRTOS.c/croutine.o
+LOAD ./FRTOS.c/heap_1.o
+LOAD ./FRTOS.c/list.o
+LOAD ./FRTOS.c/port.o
+LOAD ./FRTOS.c/queue.o
+LOAD ./FRTOS.c/tasks.o
+LOAD ./FRTOS.c/timers.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x2d96
+ *(.vectors)
+ .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000054                . = ALIGN (0x2)
+                0x00000054                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000054        0x0 linker stubs
+ *(.trampolines*)
+                0x00000054                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000054                __ctors_start = .
+ *(.ctors)
+                0x00000054                __ctors_end = .
+                0x00000054                __dtors_start = .
+ *(.dtors)
+                0x00000054                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000054        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000054                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000054        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000060       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000060                __do_copy_data
+ .init4         0x00000076       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000076                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000086        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x0000008e        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x0000008e                __vector_1
+                0x0000008e                __vector_12
+                0x0000008e                __bad_interrupt
+                0x0000008e                __vector_6
+                0x0000008e                __vector_3
+                0x0000008e                __vector_11
+                0x0000008e                __vector_13
+                0x0000008e                __vector_17
+                0x0000008e                __vector_19
+                0x0000008e                __vector_5
+                0x0000008e                __vector_4
+                0x0000008e                __vector_9
+                0x0000008e                __vector_2
+                0x0000008e                __vector_15
+                0x0000008e                __vector_8
+                0x0000008e                __vector_14
+                0x0000008e                __vector_10
+                0x0000008e                __vector_16
+                0x0000008e                __vector_18
+                0x0000008e                __vector_20
+ .text          0x00000092        0x0 ./FRTOS.c/DIO_prg.o
+ .text          0x00000092        0x0 ./FRTOS.c/RTOS_Task1_LedIntro.o
+ .text          0x00000092        0x0 ./FRTOS.c/croutine.o
+ .text          0x00000092        0x0 ./FRTOS.c/heap_1.o
+ .text          0x00000092        0x0 ./FRTOS.c/list.o
+ .text          0x00000092        0x0 ./FRTOS.c/port.o
+ .text          0x00000092        0x0 ./FRTOS.c/queue.o
+ .text          0x00000092        0x0 ./FRTOS.c/tasks.o
+ .text          0x00000092        0x0 ./FRTOS.c/timers.o
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strncpy.o)
+                0x00000092                . = ALIGN (0x2)
+ *(.text.*)
+ .text.M_DIO_void_setPinDir
+                0x00000092      0x230 ./FRTOS.c/DIO_prg.o
+                0x00000092                M_DIO_void_setPinDir
+ .text.M_DIO_void_setPinValue
+                0x000002c2      0x230 ./FRTOS.c/DIO_prg.o
+                0x000002c2                M_DIO_void_setPinValue
+ .text.M_DIO_void_getPinValue
+                0x000004f2      0x108 ./FRTOS.c/DIO_prg.o
+                0x000004f2                M_DIO_void_getPinValue
+ .text.M_DIO_void_TogPinValue
+                0x000005fa       0xfc ./FRTOS.c/DIO_prg.o
+                0x000005fa                M_DIO_void_TogPinValue
+ .text.main     0x000006f6       0x62 ./FRTOS.c/RTOS_Task1_LedIntro.o
+                0x000006f6                main
+ .text.LedIntro_code
+                0x00000758       0x34 ./FRTOS.c/RTOS_Task1_LedIntro.o
+                0x00000758                LedIntro_code
+ .text.xCoRoutineCreate
+                0x0000078c      0x128 ./FRTOS.c/croutine.o
+                0x0000078c                xCoRoutineCreate
+ .text.vCoRoutineAddToDelayedList
+                0x000008b4       0xc2 ./FRTOS.c/croutine.o
+                0x000008b4                vCoRoutineAddToDelayedList
+ .text.prvCheckPendingReadyList
+                0x00000976       0x94 ./FRTOS.c/croutine.o
+ .text.prvCheckDelayedList
+                0x00000a0a      0x15c ./FRTOS.c/croutine.o
+ .text.vCoRoutineSchedule
+                0x00000b66       0xf4 ./FRTOS.c/croutine.o
+                0x00000b66                vCoRoutineSchedule
+ .text.prvInitialiseCoRoutineLists
+                0x00000c5a       0x72 ./FRTOS.c/croutine.o
+ .text.xCoRoutineRemoveFromEventList
+                0x00000ccc       0x70 ./FRTOS.c/croutine.o
+                0x00000ccc                xCoRoutineRemoveFromEventList
+ .text.pvPortMalloc
+                0x00000d3c       0x8c ./FRTOS.c/heap_1.o
+                0x00000d3c                pvPortMalloc
+ .text.vPortFree
+                0x00000dc8       0x18 ./FRTOS.c/heap_1.o
+                0x00000dc8                vPortFree
+ .text.vPortInitialiseBlocks
+                0x00000de0       0x16 ./FRTOS.c/heap_1.o
+                0x00000de0                vPortInitialiseBlocks
+ .text.xPortGetFreeHeapSize
+                0x00000df6       0x1e ./FRTOS.c/heap_1.o
+                0x00000df6                xPortGetFreeHeapSize
+ .text.vListInitialise
+                0x00000e14       0x54 ./FRTOS.c/list.o
+                0x00000e14                vListInitialise
+ .text.vListInitialiseItem
+                0x00000e68       0x20 ./FRTOS.c/list.o
+                0x00000e68                vListInitialiseItem
+ .text.vListInsertEnd
+                0x00000e88       0x98 ./FRTOS.c/list.o
+                0x00000e88                vListInsertEnd
+ .text.vListInsert
+                0x00000f20       0xd8 ./FRTOS.c/list.o
+                0x00000f20                vListInsert
+ .text.vListRemove
+                0x00000ff8       0x92 ./FRTOS.c/list.o
+                0x00000ff8                vListRemove
+ .text.pxPortInitialiseStack
+                0x0000108a      0x306 ./FRTOS.c/port.o
+                0x0000108a                pxPortInitialiseStack
+ .text.xPortStartScheduler
+                0x00001390       0x6a ./FRTOS.c/port.o
+                0x00001390                xPortStartScheduler
+ .text.vPortEndScheduler
+                0x000013fa        0xe ./FRTOS.c/port.o
+                0x000013fa                vPortEndScheduler
+ .text.vPortYield
+                0x00001408       0xb2 ./FRTOS.c/port.o
+                0x00001408                vPortYield
+ .text.vPortYieldFromTick
+                0x000014ba       0xb6 ./FRTOS.c/port.o
+                0x000014ba                vPortYieldFromTick
+ .text.prvSetupTimerInterrupt
+                0x00001570       0xb8 ./FRTOS.c/port.o
+ .text.__vector_7
+                0x00001628       0x54 ./FRTOS.c/port.o
+                0x00001628                __vector_7
+ .text.xQueueCreate
+                0x0000167c      0x152 ./FRTOS.c/queue.o
+                0x0000167c                xQueueCreate
+ .text.xQueueGenericSend
+                0x000017ce      0x13c ./FRTOS.c/queue.o
+                0x000017ce                xQueueGenericSend
+ .text.xQueueGenericSendFromISR
+                0x0000190a       0x9a ./FRTOS.c/queue.o
+                0x0000190a                xQueueGenericSendFromISR
+ .text.xQueueGenericReceive
+                0x000019a4      0x180 ./FRTOS.c/queue.o
+                0x000019a4                xQueueGenericReceive
+ .text.xQueueReceiveFromISR
+                0x00001b24       0x9e ./FRTOS.c/queue.o
+                0x00001b24                xQueueReceiveFromISR
+ .text.uxQueueMessagesWaiting
+                0x00001bc2       0x30 ./FRTOS.c/queue.o
+                0x00001bc2                uxQueueMessagesWaiting
+ .text.uxQueueMessagesWaitingFromISR
+                0x00001bf2       0x26 ./FRTOS.c/queue.o
+                0x00001bf2                uxQueueMessagesWaitingFromISR
+ .text.vQueueDelete
+                0x00001c18       0x2c ./FRTOS.c/queue.o
+                0x00001c18                vQueueDelete
+ .text.prvCopyDataToQueue
+                0x00001c44      0x12a ./FRTOS.c/queue.o
+ .text.prvCopyDataFromQueue
+                0x00001d6e       0x90 ./FRTOS.c/queue.o
+ .text.prvUnlockQueue
+                0x00001dfe       0xa8 ./FRTOS.c/queue.o
+ .text.prvIsQueueEmpty
+                0x00001ea6       0x38 ./FRTOS.c/queue.o
+ .text.xQueueIsQueueEmptyFromISR
+                0x00001ede       0x2e ./FRTOS.c/queue.o
+                0x00001ede                xQueueIsQueueEmptyFromISR
+ .text.prvIsQueueFull
+                0x00001f0c       0x3e ./FRTOS.c/queue.o
+ .text.xQueueIsQueueFullFromISR
+                0x00001f4a       0x34 ./FRTOS.c/queue.o
+                0x00001f4a                xQueueIsQueueFullFromISR
+ .text.xTaskGenericCreate
+                0x00001f7e      0x1da ./FRTOS.c/tasks.o
+                0x00001f7e                xTaskGenericCreate
+ .text.vTaskDelete
+                0x00002158       0xc6 ./FRTOS.c/tasks.o
+                0x00002158                vTaskDelete
+ .text.vTaskDelayUntil
+                0x0000221e       0xe8 ./FRTOS.c/tasks.o
+                0x0000221e                vTaskDelayUntil
+ .text.vTaskDelay
+                0x00002306       0x6a ./FRTOS.c/tasks.o
+                0x00002306                vTaskDelay
+ .text.vTaskStartScheduler
+                0x00002370       0x6e ./FRTOS.c/tasks.o
+                0x00002370                vTaskStartScheduler
+ .text.vTaskEndScheduler
+                0x000023de       0x18 ./FRTOS.c/tasks.o
+                0x000023de                vTaskEndScheduler
+ .text.vTaskSuspendAll
+                0x000023f6       0x18 ./FRTOS.c/tasks.o
+                0x000023f6                vTaskSuspendAll
+ .text.xTaskResumeAll
+                0x0000240e      0x110 ./FRTOS.c/tasks.o
+                0x0000240e                xTaskResumeAll
+ .text.xTaskGetTickCount
+                0x0000251e       0x2e ./FRTOS.c/tasks.o
+                0x0000251e                xTaskGetTickCount
+ .text.xTaskGetTickCountFromISR
+                0x0000254c       0x2a ./FRTOS.c/tasks.o
+                0x0000254c                xTaskGetTickCountFromISR
+ .text.uxTaskGetNumberOfTasks
+                0x00002576       0x12 ./FRTOS.c/tasks.o
+                0x00002576                uxTaskGetNumberOfTasks
+ .text.vTaskIncrementTick
+                0x00002588      0x1aa ./FRTOS.c/tasks.o
+                0x00002588                vTaskIncrementTick
+ .text.vTaskSwitchContext
+                0x00002732       0xcc ./FRTOS.c/tasks.o
+                0x00002732                vTaskSwitchContext
+ .text.vTaskPlaceOnEventList
+                0x000027fe       0x6c ./FRTOS.c/tasks.o
+                0x000027fe                vTaskPlaceOnEventList
+ .text.xTaskRemoveFromEventList
+                0x0000286a       0xd0 ./FRTOS.c/tasks.o
+                0x0000286a                xTaskRemoveFromEventList
+ .text.vTaskSetTimeOutState
+                0x0000293a       0x32 ./FRTOS.c/tasks.o
+                0x0000293a                vTaskSetTimeOutState
+ .text.xTaskCheckForTimeOut
+                0x0000296c       0xba ./FRTOS.c/tasks.o
+                0x0000296c                xTaskCheckForTimeOut
+ .text.vTaskMissedYield
+                0x00002a26       0x14 ./FRTOS.c/tasks.o
+                0x00002a26                vTaskMissedYield
+ .text.prvIdleTask
+                0x00002a3a       0x18 ./FRTOS.c/tasks.o
+ .text.prvInitialiseTCBVariables
+                0x00002a52       0xae ./FRTOS.c/tasks.o
+ .text.prvInitialiseTaskLists
+                0x00002b00       0x7a ./FRTOS.c/tasks.o
+ .text.prvCheckTasksWaitingTermination
+                0x00002b7a       0x7c ./FRTOS.c/tasks.o
+ .text.prvAddCurrentTaskToDelayedList
+                0x00002bf6       0x92 ./FRTOS.c/tasks.o
+ .text.prvAllocateTCBAndStack
+                0x00002c88       0xa0 ./FRTOS.c/tasks.o
+ .text.prvDeleteTCB
+                0x00002d28       0x2c ./FRTOS.c/tasks.o
+ .text.libgcc   0x00002d54        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00002d54        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00002d54        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00002d54       0x12 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                0x00002d54                memcpy
+ .text.avr-libc
+                0x00002d66        0xe c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+                0x00002d66                memset
+ .text.avr-libc
+                0x00002d74       0x1e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strncpy.o)
+                0x00002d74                strncpy
+                0x00002d92                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00002d92        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00002d92                exit
+                0x00002d92                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00002d92        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00002d96                _etext = .
+
+.data           0x00800060        0xe load address 0x00002d96
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060        0x0 ./FRTOS.c/DIO_prg.o
+ .data          0x00800060        0x6 ./FRTOS.c/RTOS_Task1_LedIntro.o
+ .data          0x00800066        0x0 ./FRTOS.c/croutine.o
+ .data          0x00800066        0x0 ./FRTOS.c/heap_1.o
+ .data          0x00800066        0x0 ./FRTOS.c/list.o
+ .data          0x00800066        0x0 ./FRTOS.c/port.o
+ .data          0x00800066        0x0 ./FRTOS.c/queue.o
+ .data          0x00800066        0x5 ./FRTOS.c/tasks.o
+ .data          0x0080006b        0x0 ./FRTOS.c/timers.o
+ .data          0x0080006b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x0080006b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x0080006b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x0080006b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+ .data          0x0080006b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+ .data          0x0080006b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strncpy.o)
+ *(.data*)
+ .data.xNextTaskUnblockTime
+                0x0080006b        0x2 ./FRTOS.c/tasks.o
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080006e                . = ALIGN (0x2)
+ *fill*         0x0080006d        0x1 00
+                0x0080006e                _edata = .
+                0x0080006e                PROVIDE (__data_end, .)
+
+.bss            0x0080006e      0x2f9
+                0x0080006e                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080006e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x0080006e        0x0 ./FRTOS.c/DIO_prg.o
+ .bss           0x0080006e        0x0 ./FRTOS.c/RTOS_Task1_LedIntro.o
+ .bss           0x0080006e        0x0 ./FRTOS.c/croutine.o
+ .bss           0x0080006e        0x0 ./FRTOS.c/heap_1.o
+ .bss           0x0080006e        0x0 ./FRTOS.c/list.o
+ .bss           0x0080006e        0x0 ./FRTOS.c/port.o
+ .bss           0x0080006e        0x0 ./FRTOS.c/queue.o
+ .bss           0x0080006e        0x0 ./FRTOS.c/tasks.o
+ .bss           0x0080006e        0x0 ./FRTOS.c/timers.o
+ .bss           0x0080006e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x0080006e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x0080006e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x0080006e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+ .bss           0x0080006e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+ .bss           0x0080006e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strncpy.o)
+ *(.bss*)
+ .bss.Task1Hand
+                0x0080006e        0x2 ./FRTOS.c/RTOS_Task1_LedIntro.o
+                0x0080006e                Task1Hand
+ .bss.pxCurrentCoRoutine
+                0x00800070        0x2 ./FRTOS.c/croutine.o
+                0x00800070                pxCurrentCoRoutine
+ .bss.uxTopCoRoutineReadyPriority
+                0x00800072        0x1 ./FRTOS.c/croutine.o
+ .bss.xCoRoutineTickCount
+                0x00800073        0x2 ./FRTOS.c/croutine.o
+ .bss.xLastTickCount
+                0x00800075        0x2 ./FRTOS.c/croutine.o
+ .bss.xPassedTicks
+                0x00800077        0x2 ./FRTOS.c/croutine.o
+ .bss.pxReadyCoRoutineLists
+                0x00800079       0x12 ./FRTOS.c/croutine.o
+ .bss.xDelayedCoRoutineList1
+                0x0080008b        0x9 ./FRTOS.c/croutine.o
+ .bss.xDelayedCoRoutineList2
+                0x00800094        0x9 ./FRTOS.c/croutine.o
+ .bss.pxDelayedCoRoutineList
+                0x0080009d        0x2 ./FRTOS.c/croutine.o
+ .bss.pxOverflowDelayedCoRoutineList
+                0x0080009f        0x2 ./FRTOS.c/croutine.o
+ .bss.xPendingReadyCoRoutineList
+                0x008000a1        0x9 ./FRTOS.c/croutine.o
+ .bss.xNextFreeByte
+                0x008000aa        0x2 ./FRTOS.c/heap_1.o
+ .bss.xHeap     0x008000ac      0x258 ./FRTOS.c/heap_1.o
+ .bss.pxCurrentTCB
+                0x00800304        0x2 ./FRTOS.c/tasks.o
+                0x00800304                pxCurrentTCB
+ .bss.uxTasksDeleted
+                0x00800306        0x1 ./FRTOS.c/tasks.o
+ .bss.uxCurrentNumberOfTasks
+                0x00800307        0x1 ./FRTOS.c/tasks.o
+ .bss.xTickCount
+                0x00800308        0x2 ./FRTOS.c/tasks.o
+ .bss.uxTopUsedPriority
+                0x0080030a        0x1 ./FRTOS.c/tasks.o
+ .bss.uxTopReadyPriority
+                0x0080030b        0x1 ./FRTOS.c/tasks.o
+ .bss.xSchedulerRunning
+                0x0080030c        0x1 ./FRTOS.c/tasks.o
+ .bss.uxSchedulerSuspended
+                0x0080030d        0x1 ./FRTOS.c/tasks.o
+ .bss.uxMissedTicks
+                0x0080030e        0x1 ./FRTOS.c/tasks.o
+ .bss.xMissedYield
+                0x0080030f        0x1 ./FRTOS.c/tasks.o
+ .bss.xNumOfOverflows
+                0x00800310        0x1 ./FRTOS.c/tasks.o
+ .bss.uxTaskNumber
+                0x00800311        0x1 ./FRTOS.c/tasks.o
+ .bss.pxReadyTasksLists
+                0x00800312       0x2d ./FRTOS.c/tasks.o
+ .bss.xDelayedTaskList1
+                0x0080033f        0x9 ./FRTOS.c/tasks.o
+ .bss.xDelayedTaskList2
+                0x00800348        0x9 ./FRTOS.c/tasks.o
+ .bss.pxDelayedTaskList
+                0x00800351        0x2 ./FRTOS.c/tasks.o
+ .bss.pxOverflowDelayedTaskList
+                0x00800353        0x2 ./FRTOS.c/tasks.o
+ .bss.xPendingReadyList
+                0x00800355        0x9 ./FRTOS.c/tasks.o
+ .bss.xTasksWaitingTermination
+                0x0080035e        0x9 ./FRTOS.c/tasks.o
+ *(COMMON)
+                0x00800367                PROVIDE (__bss_end, .)
+                0x00002d96                __data_load_start = LOADADDR (.data)
+                0x00002da4                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800367        0x0
+                0x00800367                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800367                PROVIDE (__noinit_end, .)
+                0x00800367                _end = .
+                0x00800367                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000     0x47b8
+ *(.stab)
+ .stab          0x00000000      0x480 ./FRTOS.c/DIO_prg.o
+ .stab          0x00000480      0x51c ./FRTOS.c/RTOS_Task1_LedIntro.o
+                                0x5e8 (size before relaxing)
+ .stab          0x0000099c      0x84c ./FRTOS.c/croutine.o
+                                0xb40 (size before relaxing)
+ .stab          0x000011e8      0x354 ./FRTOS.c/heap_1.o
+                                0x624 (size before relaxing)
+ .stab          0x0000153c      0x474 ./FRTOS.c/list.o
+                                0x750 (size before relaxing)
+ .stab          0x000019b0      0x834 ./FRTOS.c/port.o
+                                0xb64 (size before relaxing)
+ .stab          0x000021e4      0xe94 ./FRTOS.c/queue.o
+                               0x11d0 (size before relaxing)
+ .stab          0x00003078     0x1578 ./FRTOS.c/tasks.o
+                               0x17d0 (size before relaxing)
+ .stab          0x000045f0      0x1c8 ./FRTOS.c/timers.o
+                                0x4c8 (size before relaxing)
+
+.stabstr        0x00000000     0x3008
+ *(.stabstr)
+ .stabstr       0x00000000     0x3008 ./FRTOS.c/DIO_prg.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(FreeRtos_Avr.elf elf32-avr)
+LOAD linker stubs
